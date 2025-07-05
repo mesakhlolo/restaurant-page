@@ -13,6 +13,9 @@ module.exports = {
     static: "./dist",
     port: 8080,
     open: true,
+    hot: true,
+    liveReload: true,
+    watchFiles: ["src/**/*"],
   },
   plugins: [
     new HtmlWebpackPlugin({
