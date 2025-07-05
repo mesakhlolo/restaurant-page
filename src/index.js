@@ -1,1 +1,1 @@
-console.log("webpack udah work bro!");
+console.log("testing hot reload, sudah bisa connect dan auto reload");
