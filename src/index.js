@@ -1,4 +1,4 @@
-import { loadHomepage } from "./homepage";
+import loadHomepage from "./homepage";
 
 const content = document.getElementById("content");
 

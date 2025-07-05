@@ -1,4 +1,4 @@
-export function loadHomepage() {
+export default function loadHomepage() {
   const homepageContent = document.createElement("div");
 
   const welcomeHeading = document.createElement("h1");
