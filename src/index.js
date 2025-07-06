@@ -10,4 +10,17 @@ const contact = document.getElementById("contact");
 // select div content
 const content = document.getElementById("content");
 
+home.addEventListener("click", function () {
+  content.innerHTML = "";
+  content.appendChild(loadHomepage());
+});
+menu.addEventListener("click", function () {
+  content.innerHTML = "";
+  content.appendChild(loadMenuPage());
+});
+contact.addEventListener("click", function () {
+  content.innerHTML = "";
+  content.appendChild(loadContactPage());
+});
+
 content.appendChild(loadHomepage());
