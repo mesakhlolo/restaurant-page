@@ -10,17 +10,19 @@ const contact = document.getElementById("contact");
 // select div content
 const content = document.getElementById("content");
 
-home.addEventListener("click", function () {
+function switchContentPage(loadContentPage) {
   content.innerHTML = "";
-  content.appendChild(loadHomepage());
+  content.appendChild(loadContentPage());
+}
+
+home.addEventListener("click", () => {
+  switchContentPage(loadHomepage);
 });
-menu.addEventListener("click", function () {
-  content.innerHTML = "";
-  content.appendChild(loadMenuPage());
+menu.addEventListener("click", () => {
+  switchContentPage(loadMenuPage);
 });
-contact.addEventListener("click", function () {
-  content.innerHTML = "";
-  content.appendChild(loadContactPage());
+contact.addEventListener("click", () => {
+  switchContentPage(loadContactPage);
 });
 
 content.appendChild(loadHomepage());
