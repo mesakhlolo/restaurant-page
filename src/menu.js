@@ -30,26 +30,36 @@ export default function loadMenuPage() {
     return itemContainer;
   }
 
-  const saksangBabi = createMenuItem(
-    "Saksang Babi",
-    saksangImage,
-    "Masakan tradisional Batak dari daging babi yang dicincang dan dimasakdengan darah, santan, serta rempah-rempah khas seperti andaliman danserai. Rasanya gurih, pedas, dan kaya aroma rempah."
-  );
-  const babiPanggang = createMenuItem(
-    "Babi Panggang",
-    babiPanggangImage,
-    "Potongan daging babi dipanggang hingga garing di luar dan empuk di dalam,disajikan dengan sambal andaliman dan saus darah (sambal rias) sebagaipelengkap. Menu ini sangat populer di Lapo Batak."
-  );
-  const arsikIkanMas = createMenuItem(
-    "Arsik Ikan Mas",
-    arsikImage,
-    "Ikan mas dimasak dengan bumbu kuning khas Batak yang terdiri dari bawang,kunyit, kemiri, andaliman, dan asam cikala. Cita rasanya asam, gurih, dan sedikit pedas dengan aroma yang kuat."
-  );
+  //  data menu item (array of objects)
+  const menuItemsData = [
+    {
+      title: "Saksang Babi",
+      image: saksangImage,
+      description:
+        "Masakan tradisional Batak dari daging babi yang dicincang dan dimasakdengan darah, santan, serta rempah-rempah khas seperti andaliman danserai. Rasanya gurih, pedas, dan kaya aroma rempah.",
+    },
+    {
+      title: "Babi Panggang",
+      image: babiPanggangImage,
+      description:
+        "Potongan daging babi dipanggang hingga garing di luar dan empuk di dalam,disajikan dengan sambal andaliman dan saus darah (sambal rias) sebagaipelengkap. Menu ini sangat populer di Lapo Batak.",
+    },
+    {
+      title: "Arsik Ikan Mas",
+      image: arsikImage,
+      description:
+        "Ikan mas dimasak dengan bumbu kuning khas Batak yang terdiri dari bawang,kunyit, kemiri, andaliman, dan asam cikala. Cita rasanya asam, gurih, dan sedikit pedas dengan aroma yang kuat.",
+    },
+  ];
 
+  // add menu title content
   menuContent.appendChild(menuTitle);
-  menuContent.appendChild(saksangBabi);
-  menuContent.appendChild(babiPanggang);
-  menuContent.appendChild(arsikIkanMas);
+
+  // loop untuk membuat dan menambahkan tiap menu item
+  menuItemsData.forEach((item) => {
+    const menuItem = createMenuItem(item.title, item.image, item.description);
+    menuContent.appendChild(menuItem);
+  });
 
   return menuContent;
 }
