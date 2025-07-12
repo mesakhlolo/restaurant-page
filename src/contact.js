@@ -1,10 +1,24 @@
 export default function loadContactPage() {
-  const pageContent = document.createElement("div");
+  const contactContentContainer = document.createElement("div");
 
-  const testContent = document.createElement("p");
-  testContent.innerText = "CONTACT";
+  const contactTitle = document.createElement("h1");
+  contactTitle.innerText = "Kontak & Lokasi";
 
-  pageContent.appendChild(testContent);
+  const contactTextContent = document.createElement("div");
+  contactTextContent.innerHTML = `
+  <p>📍 Alamat: Jl. Danau Toba No. 77, Medan</p>
+  <p>📞 Telepon: 0822-1234-5678</p>
+  <p>📧 Email: info@lapobatakbahari.com</p>
 
-  return pageContent;
+  <h2>Jam Operasional</h2>
+  <ul>
+    <li>Senin – Sabtu: 10.00 – 21.00 WIB</li>
+    <li>Minggu: Tutup</li>
+  </ul>
+  `;
+
+  contactContentContainer.appendChild(contactTitle);
+  contactContentContainer.appendChild(contactTextContent);
+
+  return contactContentContainer;
 }
