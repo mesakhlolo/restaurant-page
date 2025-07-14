@@ -1,3 +1,4 @@
+// webpack.common.js
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
@@ -7,15 +8,6 @@ module.exports = {
     path: path.resolve(__dirname, "dist"),
     filename: "bundle.js",
     clean: true,
-  },
-  mode: "development",
-  devServer: {
-    static: "./dist",
-    port: 8080,
-    open: true,
-    hot: true,
-    liveReload: true,
-    watchFiles: ["src/**/*"],
   },
   plugins: [
     new HtmlWebpackPlugin({
